@@ -1,0 +1,10 @@
+<= depth, alpha, beta
+=> best move
+
+f(depth, alpha, beta)
+if depth==0:
+    return evaluation(current)
+else:
+    moves=next_moves()
+    for move in moves:
+    

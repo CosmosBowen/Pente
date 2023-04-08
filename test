@@ -1,0 +1,62 @@
+# import numpy as np
+
+# arr = np.array([1, 2, 2, 3, 4, 2])
+# print(arr)
+
+
+# indices = np.where(arr == 2)[0]
+
+# print(indices[0])
+
+import pygame
+
+# Initialize pygame
+pygame.init()
+
+# Set up the screen
+screen = pygame.display.set_mode((640, 480))
+pygame.display.set_caption("My Game")
+
+# Create the font object
+win_font = pygame.font.Font("path/to/font/file.ttf", 64)
+
+# Create the text surface
+win_text = win_font.render("You Win!", True, (255, 255, 255))
+
+# Get the dimensions of the text surface
+win_text_rect = win_text.get_rect()
+
+# Center the text on the screen
+win_text_rect.center = (320, 240)
+
+# Draw the text on the screen
+screen.blit(win_text, win_text_rect)
+
+# Update the screen
+pygame.display.update()
+
+# Main game loop
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            # sys.exit()
+
+
+# board = [
+#     [0, 2, 2, 2, 2, 1, 2, 1],
+#     [0, 1, 1, 2, 2, 2, 2, 0],
+#     [0, 0, 2, 2, 2, 2, 0, 1],
+#     [1, 1, 2, 2, 2, 1, 1, 2],
+# ]
+
+# board = [
+#     [0, 0, 0, 1],
+#     [2, 1, 0, 1],
+#     [2, 1, 2, 2],
+#     [2, 2, 2, 2],
+#     [2, 2, 2, 2],
+#     [1, 2, 2, 1],
+#     [2, 2, 0, 1],
+#     [1, 0, 1, 2]
+# ]
